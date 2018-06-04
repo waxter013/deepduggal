@@ -13,7 +13,7 @@ class HomePage extends Component {
         return (
             <DefaultLayout>
                 {/*<Landing/>*/}
-                <h1 className={css(styles.header)}><Typography use={"headline3"}Work</Typography></h1>
+                <h1 className={css(styles.header)}><Typography use={"headline3"}>Work</Typography></h1>
                 <Projects projects={projects}/>
             </DefaultLayout>
         );
