@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import DefaultLayout from '../layouts/DefaultLayout';
-import Landing from '../components/Landing';
 import Projects from '../components/Projects';
 import { Typography } from 'rmwc/Typography';
 import {StyleSheet, css} from 'aphrodite';
@@ -12,7 +11,6 @@ class HomePage extends Component {
     render () {
         return (
             <DefaultLayout>
-                {/*<Landing/>*/}
                 <h1 className={css(styles.header)}><Typography use={"headline3"}>Work</Typography></h1>
                 <Projects projects={projects}/>
             </DefaultLayout>

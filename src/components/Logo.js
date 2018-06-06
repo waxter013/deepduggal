@@ -8,9 +8,9 @@ class Logo extends Component {
 
         return (
             <a href={href} className={css(styles.logo)}>
-                <Typography use="headline3">{this.props.children}</Typography>
+                <Typography use="headline3">Deep Duggal</Typography>
                 <br/>
-                <Typography use="headline5">Full-Stack Developer</Typography>
+                <Typography use="headline5">Web Developer</Typography>
             </a>
         );
     }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 // Data
 import navLinks from "../data/routes";

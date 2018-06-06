@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import Logo from './Logo';
-import NavLink from './NavLink';
+// import NavLink from './NavLink';
 import {StyleSheet, css} from 'aphrodite';
-import { Typography } from 'rmwc/Typography';
 
 class Navbar extends Component {
     render () {
-        const {navLinks} = this.props;
+        // const {navLinks} = this.props;
 
         return (
             <nav className={css(styles.nav)}>
