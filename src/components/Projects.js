@@ -1,68 +1,80 @@
 import React, {Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 
-class Projects extends Component {
-    render () {
-        const { projects } = this.props;
+const projectStyles = StyleSheet.create({
+  project: {
+      '@media all and (min-width: 0px)': {
+          position: "relative",
+          minHeight: "calc(350px - 1rem)",
+          maxHeight: "calc(90vh - 2rem)",
+          margin: "0 1rem 1rem 1rem",
+          width: "calc(100% - 2rem)",
+          flex: '1 1 auto',
+      },
+      '@media all and (min-width: 768px)': {
+        width: "calc(50% - 2rem)",
+        // margin: '0 0 1rem 0',
+      }
+  },
+  projectImg: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      height: "100%",
+      width: "100%",
+      zIndex: "-1",
+      objectFit: "cover",
+      objectPosition: "center center"
+  },
+  projectName: {
+      position: "absolute",
+      margin: 0,
+      bottom: "1rem",
+      left: "1rem",
+      zIndex: 1
+  }
+});
 
-        return (
-            <section className={css(styles.projectContainer)}>
-                {/*<h1>Projects</h1>*/}
-                {projects.map(({name, img, alt, liveUrl}, id) => {
-                    return (
-                        <a className={css(styles.project)} href={liveUrl} key={id}>
-                            <img className={css(styles.projectImg)} src={img} alt={alt} />
-                        </a>
-                    );
-                })}
-            </section>
-        );
-    }
+function Project ({name, img, alt, liveUrl}) {
+  return (
+    <a className={css(projectStyles.project)} href={liveUrl}>
+      <img className={css(projectStyles.projectImg)} src={img} alt={alt} />
+    </a>
+  )
 }
 
-const styles = StyleSheet.create({
-    projectContainer: {
-        '@media screen and (min-width: 0px)': {
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around"
-        },
-        '@media screen and (min-width: 768px)': {
-        }
-    },
-    project: {
-        '@media screen and (min-width: 0px)': {
-            position: "relative",
-            minHeight: "350px",
-            maxHeight: "100%",
-            padding: "2rem",
-            width: "100%",
-            // flex: "0 1 auto",
-        },
-        '@media screen and (min-width: 768px)': {
-            width: "50%",
-        },
+class Projects extends Component {
+  render () {
+    const { projects } = this.props;
 
-    },
-    projectImg: {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        height: "100%",
+    return (
+      <section className={css(projectsContainer.container)}>
+        {projects.map((data, id) => {
+          return (
+            <Project {...data} key={id}/>
+          );
+        })}
+      </section>
+    );
+  }
+}
+
+const projectsContainer = StyleSheet.create({
+  container: {
+    '@media all and (min-width: 0px)': {
+        // height: "100%"
         width: "100%",
-        zIndex: "-1",
-        objectFit: "cover",
-        objectPosition: "center center"
+        display: "flex",
+        flexFlow: "column wrap",
+        justifyContent: "center",
     },
-    projectName: {
-        position: "absolute",
-        margin: 0,
-        bottom: "1rem",
-        left: "1rem",
-        zIndex: 1
+    '@media all and (min-width: 768px)': {
+      flexDirection: 'row',
+      justifyContent: "space-evenly",
+      margin: '0 1rem',
+      width: 'calc(100% - 2rem)',
     }
+  }
 });
 
 export default Projects;
