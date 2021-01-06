@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import 'material-components-web/dist/material-components-web.min.css';
+import '@material/typography/dist/mdc.typography.min.css';
 import './App.css';
 import HomePage from './pages/';
 
