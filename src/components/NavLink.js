@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {StyleSheet, css} from "aphrodite";
 
-class NavLink extends Component {
+class NavLink extends PureComponent {
     render () {
         const {href} = this.props;
 

@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import { Typography } from 'rmwc/Typography';
 
-class Landing extends Component {
+class Landing extends PureComponent {
     render () {
         return (
             <section className={css(styles.landing)}>

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent, memo} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 
 const projectStyles = StyleSheet.create({
@@ -35,15 +35,15 @@ const projectStyles = StyleSheet.create({
   }
 });
 
-function Project ({name, img, alt, liveUrl}) {
+const Project = memo(function ({name, img, alt, liveUrl}) {
   return (
     <a className={css(projectStyles.project)} href={liveUrl}>
       <img className={css(projectStyles.projectImg)} src={img} alt={alt} />
     </a>
   )
-}
+});
 
-class Projects extends Component {
+class Projects extends PureComponent {
   render () {
     const { projects } = this.props;
 

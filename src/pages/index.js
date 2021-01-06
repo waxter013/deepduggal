@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Projects from '../components/Projects';
 import { Typography } from 'rmwc/Typography';
@@ -7,7 +7,7 @@ import {StyleSheet, css} from 'aphrodite';
 // Data
 import projects from "../data/projects";
 
-class HomePage extends Component {
+class HomePage extends PureComponent {
     render () {
         return (
             <DefaultLayout>

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import 'material-components-web/dist/material-components-web.min.css';
 import './App.css';
 import HomePage from './pages/';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <div className="App">

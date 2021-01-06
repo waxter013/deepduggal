@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Logo from './Logo';
 // import NavLink from './NavLink';
 import {StyleSheet, css} from 'aphrodite';
 
-class Navbar extends Component {
+class Navbar extends PureComponent {
     render () {
         // const {navLinks} = this.props;
 

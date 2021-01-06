@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import { Typography } from 'rmwc/Typography';
 
-class Logo extends Component {
+class Logo extends PureComponent {
     render () {
         const {href} = this.props;
 
